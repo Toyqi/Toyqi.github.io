@@ -82,6 +82,6 @@ s3_upload: publish
 
 github: publish
 	#git init ; git add . ;  git commit -am 'ci by wangqi' ; git remote add origin https://github.com/Toyqi/Toyqi.github.io.git ; git push origin master --force
-	git add . ; git commit -am 'ci by wangqi' ; git push
+	git add . ; git commit -am 'ci by wangqi' ; git push origin master --force
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload github
