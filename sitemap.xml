@@ -5,37 +5,44 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://toyqi.github.io/index.html</loc>
-<lastmod>2013-09-10T01:48:23-00:00</lastmod>
+<lastmod>2013-09-10T02:12:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://toyqi.github.io/archives.html</loc>
-<lastmod>2013-09-10T01:48:23-00:00</lastmod>
+<lastmod>2013-09-10T02:12:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://toyqi.github.io/tags.html</loc>
-<lastmod>2013-09-10T01:48:23-00:00</lastmod>
+<lastmod>2013-09-10T02:12:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://toyqi.github.io/categories.html</loc>
-<lastmod>2013-09-10T01:48:23-00:00</lastmod>
+<lastmod>2013-09-10T02:12:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://toyqi.github.io/pages/about.html</loc>
-<lastmod>2013-09-10T01:48:23-00:00</lastmod>
+<lastmod>2013-09-10T02:12:12-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
+</url>
+
+<url>
+<loc>http://toyqi.github.io/pages/2013/09/10/teacher's_day.html</loc>
+<lastmod>2013-09-10T00:00:00-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
 </url>
 
 <url>
@@ -46,22 +53,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://toyqi.github.io/category/life.html</loc>
+<lastmod>2013-09-10T02:12:12-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://toyqi.github.io/category/tech.html</loc>
-<lastmod>2013-09-10T01:48:23-00:00</lastmod>
+<lastmod>2013-09-10T02:12:12-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://toyqi.github.io/tag/jiao-shi-jie.html</loc>
+<lastmod>2013-09-10T02:12:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://toyqi.github.io/tag/hei-ke.html</loc>
-<lastmod>2013-09-10T01:48:23-00:00</lastmod>
+<lastmod>2013-09-10T02:12:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://toyqi.github.io/author/toyqi.html</loc>
-<lastmod>2013-09-10T01:48:23-00:00</lastmod>
+<lastmod>2013-09-10T02:12:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
