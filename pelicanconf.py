@@ -6,7 +6,6 @@ AUTHOR = u'Toyqi'
 SITENAME = u'Toyqi的程序世界'
 SITEURL = 'http://toyqi.github.io'
 
-
 GITHUB_URL = 'https://github.com/toyqi'
 ARCHIVES_URL = 'archives.html'
 ARTICLE_URL = 'pages/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
