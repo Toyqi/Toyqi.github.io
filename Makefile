@@ -81,6 +81,6 @@ s3_upload: publish
 	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed
 
 github: publish
-	git init ; git add . ;  git commit -m 'ci by wangqi' ; git remote add origin https://github.com/Toyqi/toyqi.github.io.git ; git push origin master --force
+	git init ; git add . ;  git commit -m 'ci by wangqi' ; git remote add origin https://github.com/Toyqi/Toyqi.github.io.git ; git push origin master --force
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload github
