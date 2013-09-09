@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Toyqi的程序世界 - 可读性</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Toyqi">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="../theme/css/bootstrap.min.css" type="text/css" />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .tag-1 {
+        font-size: 13pt;
+      }
+      .tag-2 {
+        font-size: 10pt;
+      }
+      .tag-2 {
+        font-size: 8pt;
+      }
+      .tag-4 {
+        font-size: 6pt;
+     }
+    </style>
+    <link href="../theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="../theme/css/font-awesome.css" rel="stylesheet">
+
+    <link href="../theme/css/pygments.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../theme/images/favicon.ico">
+    <link rel="apple-touch-icon" href="../theme/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../theme/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../theme/images/apple-touch-icon-114x114.png">
+
+    <link href="../" type="application/atom+xml" rel="alternate" title="Toyqi的程序世界 ATOM Feed" />
+        <link href="../feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="Toyqi的程序世界 RSS Feed" />
+    
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="../index.html">Toyqi的程序世界 </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+                                                          <li><a href="../pages/about.html">About</a></li>
+                                        <li class="divider-vertical"></li>
+                                              <li >
+                    <a href="../category/life.html">
+						<i class="icon-folder-open icon-large"></i>Life
+					</a>
+                  </li>
+                                <li >
+                    <a href="../category/tech.html">
+						<i class="icon-folder-open icon-large"></i>Tech
+					</a>
+                  </li>
+                                <li >
+                    <a href="../category/work.html">
+						<i class="icon-folder-open icon-large"></i>Work
+					</a>
+                  </li>
+              
+                          <ul class="nav pull-right">
+                                <li><a href="../archives.html"><i class="icon-th-list"></i>Archives</a></li>
+                          </ul>
+
+            </ul>
+            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="span9" id="content">
+                            <div class="article">
+                <h1><a href="../pages/2013/08/08/clean_code.html">编写可读代码的艺术</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-08-08T00:00:00">
+        <i class="icon-calendar"></i>2013-08-08
+</abbr>
+<span class="label">By</span>
+<a href="../author/toyqi.html"><i class="icon-user"></i>Toyqi</a>
+<span class="label">Category</span>
+<a href="../category/tech.html"><i class="icon-folder-open"></i>Tech</a>.
+
+
+<span class="label">Tags</span>
+	<a href="../tag/ke-du-xing.html"><i class="icon-tag"></i>可读性</a>
+	<a href="../tag/du-shu-bi-ji.html"><i class="icon-tag"></i>读书笔记</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>我最早开始重视代码的可读性还是大三在搜狐做Python研发实习生的时候。那会儿我特别嫩，写代码还是学校大作业风格，天天被leader各种批评。现在回忆起来，虽然在搜狐呆的时间特别短，但那段经历能引起我对代码可读性的重视，也算是重量级的收获了。</p>
+<p>今天一口气读完了《编写可读性代码的艺术》，感觉非常爽。我一直认为代码的可读性绝对是第一重要的，正如《黑客与画家》所言："代码写出来是给人看的，附带着能在机器上运行"。</p>
+<p>顺手记录了几个重要的原则：</p>
+<ol>
+<li>
+<p>可读性基本定理：代码的写法应当使别人理解它所需的时间最小化。</p>
+</li>
+<li>
+<p>把信息装进名字里。</p>
+</li>
+<li>
+<p>清晰和精确比装可爱好。</p>
+</li>
+<li>
+<p>在小的作用域内可以使用短的名字。</p>
+</li>
+<li>
+<p>不会误解的名字是最好的名字。</p>
+</li>
+<li>
+<p>使用一致的布局；让相似的代码看上去相似；把相关的代码行分组，形成代码块。</p>
+</li>
+<li>
+<p>一致的风格比正确的风格更重要。</p>
+</li>
+<li>
+<p>注释的目的是尽量帮助读者了解得和作者一样多。</p>
+</li>
+<li>
+<p>不要为那些从代码本身就能快速推断的事实写注释。</p>
+</li>
+<li>
+<p>注释应该有很高的信息/空间率。</p>
+</li>
+<li>
+<p>把条件、循环以及其他对控制流的改变做得越“自然”越好，使读者不用停下了重读你的代码。</p>
+</li>
+<li>
+<p>默认情况下都用if/else，三目运算符?:只在最简单的情况下使用。</p>
+</li>
+<li>
+<p>当你对代码改动时，从全新的角度审视它，把它作为一个整体来看待。</p>
+</li>
+<li>
+<p>把超长表达式拆分出易于理解的小块。</p>
+</li>
+<li>
+<p>小心“智能”的小代码段，它们往往在以后会让别人读起来很困惑 ...</p></li></ol>
+                        <a class="btn primary xsmall" href="../pages/2013/08/08/clean_code.html">more ...</a>
+                </div>
+        </div>
+        <hr />
+        
+                                <section id="content" class="body">
+                <h1>Pages</h1>
+                                        <li><a href="../pages/about.html">About</a></li>
+                                </section>
+                </div><!--/span-->
+
+                <div class="span3 well sidebar-nav" id="sidebar">
+            <ul class="nav nav-list">
+<li class="nav-header"><h4><i class="icon-external-link"></i>blogroll</h4></li>
+    <li><a href="https://www.google.com/ncr"><i class="icon-external-link"></i>Google</a></li>
+    <li><a href="http://python.org/"><i class="icon-external-link"></i>Python</a></li>
+    <li><a href="http://docs.getpelican.com/"><i class="icon-external-link"></i>Pelican</a></li>
+<li class="nav-header"><h4><i class="icon-home icon-large"></i> social</h4></li>
+<li><a href="../" rel="alternate"><i class="icon-bookmark icon-large"></i>atom feed</a></li>
+<li><a href="../feeds/all.rss.xml" rel="alternate"><i class="icon-bookmark icon-large"></i>rss feed</a></li>
+    <li><a href="https://github.com/toyqi"><i class="icon-Github-sign icon-large"></i>Github</a></li>
+    <li><a href="http://weibo.com/wqibyr"><i class="icon-微博-sign icon-large"></i>微博</a></li>
+    <li><a href="http://www.douban.com/people/Toyqi/"><i class="icon-豆瓣-sign icon-large"></i>豆瓣</a></li>
+
+<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
+<li>
+<a href="../category/life.html">
+    <i class="icon-folder-open icon-large"></i>Life
+</a>
+</li>
+<li>
+<a href="../category/tech.html">
+    <i class="icon-folder-open icon-large"></i>Tech
+</a>
+</li>
+<li>
+<a href="../category/work.html">
+    <i class="icon-folder-open icon-large"></i>Work
+</a>
+</li>
+
+<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
+<li class="tag-4">
+    <a href="../tag/blog.html">
+        <i class="icon-tag icon-large"></i>blog
+    </a>
+</li>
+<li class="tag-2">
+    <a href="../tag/hang-zhou.html">
+        <i class="icon-tag icon-large"></i>杭州
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/ji-zhu.html">
+        <i class="icon-tag icon-large"></i>技术
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/lian-xi.html">
+        <i class="icon-tag icon-large"></i>练习
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/bai-a.html">
+        <i class="icon-tag icon-large"></i>百阿
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/bian-cheng.html">
+        <i class="icon-tag icon-large"></i>编程
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/a-li.html">
+        <i class="icon-tag icon-large"></i>阿里
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/lisp.html">
+        <i class="icon-tag icon-large"></i>lisp
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/yu-ming.html">
+        <i class="icon-tag icon-large"></i>域名
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/mo-xiao-shi.html">
+        <i class="icon-tag icon-large"></i>一万小时
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/pa-chong.html">
+        <i class="icon-tag icon-large"></i>爬虫
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/du-shu-bi-ji.html">
+        <i class="icon-tag icon-large"></i>读书笔记
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/gong-si.html">
+        <i class="icon-tag icon-large"></i>公司
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/macintoch.html">
+        <i class="icon-tag icon-large"></i>macintoch
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/ke-du-xing.html">
+        <i class="icon-tag icon-large"></i>可读性
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/hei-ke.html">
+        <i class="icon-tag icon-large"></i>黑客
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/nei-tui.html">
+        <i class="icon-tag icon-large"></i>内推
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/jian-li.html">
+        <i class="icon-tag icon-large"></i>简历
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/she-ji-mo-shi.html">
+        <i class="icon-tag icon-large"></i>设计模式
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/pelican.html">
+        <i class="icon-tag icon-large"></i>pelican
+    </a>
+</li>
+<li class="tag-1">
+    <a href="../tag/tao-bao.html">
+        <i class="icon-tag icon-large"></i>淘宝
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/bai-du.html">
+        <i class="icon-tag icon-large"></i>百度
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/eclipse.html">
+        <i class="icon-tag icon-large"></i>eclipse
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/bian-ji-qi.html">
+        <i class="icon-tag icon-large"></i>编辑器
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/hua-xue.html">
+        <i class="icon-tag icon-large"></i>滑雪
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/godaddy.html">
+        <i class="icon-tag icon-large"></i>godaddy
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/mac-os-x.html">
+        <i class="icon-tag icon-large"></i>mac os x
+    </a>
+</li>
+<li class="tag-2">
+    <a href="../tag/python.html">
+        <i class="icon-tag icon-large"></i>python
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/vim.html">
+        <i class="icon-tag icon-large"></i>vim
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/java.html">
+        <i class="icon-tag icon-large"></i>java
+    </a>
+</li>
+
+<li class="nav-header"><h4><i class="icon-search"></i>Google Search</h4></li>
+<div id="cse" style="width: 100%;">Loading</div>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">
+  google.load('search', '1');
+  google.setOnLoadCallback(function() {
+    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+      '012191777864628038963:sjrtj5zxtec', customSearchOptions);
+    customSearchControl.setResultSetSize(google.search.Search.SMALL_RESULTSET);
+    customSearchControl.draw('cse');
+  }, true);
+</script>
+<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
+
+</ul>        </div><!--/.well -->
+
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <address id="about">
+                Proudly powered by <a href="http://pelican.notmyidea.org/">Pelican <i class="icon-external-link"></i></a>,
+                                which takes great advantage of <a href="http://python.org">Python <i class="icon-external-link"></i></a>.
+        </address><!-- /#about -->
+
+        <p>The theme is from <a href="http://twitter.github.com/bootstrap/">Bootstrap from Twitter <i class="icon-external-link"></i></a>,
+                   and <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome <i class="icon-external-link"></i></a>, thanks!</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+	var pageTracker = _gat._getTracker("UA-43842699-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+        <script type="text/javascript">
+    var disqus_shortname = 'wqiak47';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+    <!-- Le javascript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../theme/js/jquery-1.7.2.min.js"></script>
+    <script src="../theme/js/bootstrap.min.js"></script>
+  </body>
+</html>
