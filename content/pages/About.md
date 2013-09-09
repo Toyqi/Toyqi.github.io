@@ -2,20 +2,4 @@ Title: About
 
 大家好，我来自北邮，这是我的博客。
 
-这个博客使用Pelican技术，采用极简Style搭建在Github上，记录我毕业后加入杭州阿里的成长历程。
-
-我曾在百度实习过大半年，但实在是不太喜欢百度这个公司，于是在毕业前离开了那里。
-
-我最终在毕业的时候选择了阿里。
-
-我热爱编程，开发环境嗜好Mac OS X + Oh-my-zsh + Vim + Git的组合，惯用clang + gdb进行编译、调试。键盘流，快捷键党，尤其反感编程的时候用鼠标的编程习惯。编程语言方面熟悉c/c++/java/python/php/scheme，有代码洁癖，平时没事喜欢看点源码，常年混迹github，google group，stackoverflow等技术社区。
-
-我崇尚黑客文化与Geek精神，喜欢小众的东西，热爱一切简洁、快速且强壮的事物。
-
-我热爱竞争。大四这一年找工作拼得很凶，落下了竞争后遗症：面对任何竞争，我都会不由自主地凶狠起来，并无比渴望获胜。
-
-我使用[Gist](https://gist.github.com/lizherui/6184006)来维护个人简历，目前还是毕业前的资料。不过到了必要的时候，我会彻底更新它。
-
-我使用[豆瓣读书](http://book.douban.com/people/lizherui)来维护阅读的书籍，欢迎关注。
-
-我使用[Dropbox](https://www.dropbox.com/sh/4wweu1f2wd60epg/Sv-EQzFhfw)来维护收藏的技术书籍和资料，随时随地都可以下载。
+这个博客使用Pelican技术，采用极简Style搭建在Github上，记录我的成长历程。

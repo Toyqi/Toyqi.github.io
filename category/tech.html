@@ -162,75 +162,6 @@
         </div>
         <hr />
                 <div class="article">
-                <h1><a href="../pages/2013/08/08/clean_code.html">编写可读代码的艺术</a></h1>
-                <div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2013-08-08T00:00:00">
-        <i class="icon-calendar"></i>2013-08-08
-</abbr>
-<span class="label">By</span>
-<a href="../author/toyqi.html"><i class="icon-user"></i>Toyqi</a>
-<span class="label">Category</span>
-<a href="../category/tech.html"><i class="icon-folder-open"></i>Tech</a>.
-
-
-<span class="label">Tags</span>
-	<a href="../tag/ke-du-xing.html"><i class="icon-tag"></i>可读性</a>
-	<a href="../tag/du-shu-bi-ji.html"><i class="icon-tag"></i>读书笔记</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><p>我最早开始重视代码的可读性还是大三在搜狐做Python研发实习生的时候。那会儿我特别嫩，写代码还是学校大作业风格，天天被leader各种批评。现在回忆起来，虽然在搜狐呆的时间特别短，但那段经历能引起我对代码可读性的重视，也算是重量级的收获了。</p>
-<p>今天一口气读完了《编写可读性代码的艺术》，感觉非常爽。我一直认为代码的可读性绝对是第一重要的，正如《黑客与画家》所言："代码写出来是给人看的，附带着能在机器上运行"。</p>
-<p>顺手记录了几个重要的原则：</p>
-<ol>
-<li>
-<p>可读性基本定理：代码的写法应当使别人理解它所需的时间最小化。</p>
-</li>
-<li>
-<p>把信息装进名字里。</p>
-</li>
-<li>
-<p>清晰和精确比装可爱好。</p>
-</li>
-<li>
-<p>在小的作用域内可以使用短的名字。</p>
-</li>
-<li>
-<p>不会误解的名字是最好的名字。</p>
-</li>
-<li>
-<p>使用一致的布局；让相似的代码看上去相似；把相关的代码行分组，形成代码块。</p>
-</li>
-<li>
-<p>一致的风格比正确的风格更重要。</p>
-</li>
-<li>
-<p>注释的目的是尽量帮助读者了解得和作者一样多。</p>
-</li>
-<li>
-<p>不要为那些从代码本身就能快速推断的事实写注释。</p>
-</li>
-<li>
-<p>注释应该有很高的信息/空间率。</p>
-</li>
-<li>
-<p>把条件、循环以及其他对控制流的改变做得越“自然”越好，使读者不用停下了重读你的代码。</p>
-</li>
-<li>
-<p>默认情况下都用if/else，三目运算符?:只在最简单的情况下使用。</p>
-</li>
-<li>
-<p>当你对代码改动时，从全新的角度审视它，把它作为一个整体来看待。</p>
-</li>
-<li>
-<p>把超长表达式拆分出易于理解的小块。</p>
-</li>
-<li>
-<p>小心“智能”的小代码段，它们往往在以后会让别人读起来很困惑 ...</p></li></ol>
-                        <a class="btn primary xsmall" href="../pages/2013/08/08/clean_code.html">more ...</a>
-                </div>
-        </div>
-        <hr />
-                <div class="article">
                 <h1><a href="../pages/2013/08/06/become_a_hack.html">如何成为一名黑客(转)</a></h1>
                 <div class="well small"><footer class="post-info">
 <span class="label">Date</span>
@@ -257,11 +188,11 @@
         </div>
         <hr />
                 <div class="article">
-                <h1><a href="../pages/2013/08/04/lisp_design_patterns.html">Java设计模式在Common Lisp中的体现</a></h1>
+                <h1><a href="../pages/2013/07/31/spider.html">爬取校招信息</a></h1>
                 <div class="well small"><footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2013-08-04T00:00:00">
-        <i class="icon-calendar"></i>2013-08-04
+<abbr class="published" title="2013-07-31T00:00:00">
+        <i class="icon-calendar"></i>2013-07-31
 </abbr>
 <span class="label">By</span>
 <a href="../author/toyqi.html"><i class="icon-user"></i>Toyqi</a>
@@ -270,38 +201,23 @@
 
 
 <span class="label">Tags</span>
-	<a href="../tag/java.html"><i class="icon-tag"></i>java</a>
-	<a href="../tag/lisp.html"><i class="icon-tag"></i>lisp</a>
-	<a href="../tag/she-ji-mo-shi.html"><i class="icon-tag"></i>设计模式</a>
+	<a href="../tag/python.html"><i class="icon-tag"></i>python</a>
+	<a href="../tag/pa-chong.html"><i class="icon-tag"></i>爬虫</a>
 </footer><!-- /.post-info --></div>
-                <div class="summary"><p>最近在进一步学习Java的过程中，我愈发感到Java把面向对象的编程思想玩到了登峰造极的地步。而Java中最能表现面向对象编程思想的，就是大名鼎鼎的设计模式了。</p>
-<p>这是Wikipedia中对设计模式的定义：设计模式并不直接用来完成代码的编写，而是描述在各种不同情况下，要怎么解决问题的一种方案。面向对象设计模式通常以类型或对象来描述其中的关系和相互作用，但不涉及用来完成应用程序的特定类型或对象。设计模式能使不稳定依赖于相对稳定、具体依赖于相对抽象，避免会引起麻烦的紧耦合，以增强软件设计面对并适应变化的能力。</p>
-<p>在学习了一些设计模式后，我们会发现这23种设计模式都围绕着以下三大基本原则：</p>
-<ol>
-<li>中意于组合而不是继承。</li>
-<li>依赖于接口而不是实现。</li>
-<li>高内聚，低耦合。</li>
-</ol>
-<p>不过，除了以上这些收获和感悟以外，我发现了一些更让人感兴趣的东西，这也是这篇文章马上要探讨的重点——Java设计模式在Common lisp中的体现。</p>
-<p>Java和Common lisp, 前者作为OO的代表，喜欢玩类和对象；后者作为Functional Programming的代表，喜欢玩函数和闭包。乍一看它俩应该风马牛不相及，井水不犯河水，但实际上我们会惊讶地发现Java设计模式中有着太多Common Lisp的对照，这种现象让人越来越强烈地感觉：软件设计虽然有众多的门派、风格和表现形式，但总体思想上似乎是殊途同归的，比如构造抽象屏障和提高抽象层次。</p>
-<p>Java至少有16种设计模式能对应到Common Lisp中，如下图：</p>
-<p><img alt="aaa" src="https://lh6.googleusercontent.com/--fbXkQDQfg0/Uf56NGxglbI/AAAAAAAAAGo/vpbBtYGAoxM/w414-h292-no/1.png" /></p>
-<p>Talk is cheap, let me ...</p>
-                        <a class="btn primary xsmall" href="../pages/2013/08/04/lisp_design_patterns.html">more ...</a>
+                <div class="summary"><p>抓取北邮人论坛和水木社区校招信息的爬虫程序, 直接运行main.py即可在本机(<a href="http://127.0.0.1:8888">http://127.0.0.1:8888</a>)访问，非常简洁，可以扩展。</p>
+<p>此外，已经增加手机短信通知功能，移动、联通、电信都可以用。</p>
+<p>Talk is cheap, show you the code:<a href="https://github.com/lizherui/spider_python">https://github.com/lizherui/spider_python</a>.</p>
+<p>Enjoy it.</p>
+                        <a class="btn primary xsmall" href="../pages/2013/07/31/spider.html">more ...</a>
                 </div>
         </div>
         <hr />
         
-                <div class="pagination">
-        <ul>
-                                        <li class="prev disabled"><a href="#">&larr; Previous</a></li>
-                                                        <li class="active"><a href="../category/tech.html">1</a></li>
-                                        <li class=""><a href="../category/tech2.html">2</a></li>
-                                                        <li class="next"><a href="../category/tech2.html">Next &rarr;</a></li>
-                        </ul>
-        </div>
-
-        </div><!--/span-->
+                                <section id="content" class="body">
+                <h1>Pages</h1>
+                                        <li><a href="../pages/about.html">About</a></li>
+                                </section>
+                </div><!--/span-->
 
                 <div class="span3 well sidebar-nav" id="sidebar">
             <ul class="nav nav-list">
@@ -335,53 +251,8 @@
 
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
 <li class="tag-4">
-    <a href="../tag/blog.html">
-        <i class="icon-tag icon-large"></i>blog
-    </a>
-</li>
-<li class="tag-2">
-    <a href="../tag/hang-zhou.html">
-        <i class="icon-tag icon-large"></i>杭州
-    </a>
-</li>
-<li class="tag-4">
     <a href="../tag/ji-zhu.html">
         <i class="icon-tag icon-large"></i>技术
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/lian-xi.html">
-        <i class="icon-tag icon-large"></i>练习
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/bai-a.html">
-        <i class="icon-tag icon-large"></i>百阿
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/bian-cheng.html">
-        <i class="icon-tag icon-large"></i>编程
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/a-li.html">
-        <i class="icon-tag icon-large"></i>阿里
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/lisp.html">
-        <i class="icon-tag icon-large"></i>lisp
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/yu-ming.html">
-        <i class="icon-tag icon-large"></i>域名
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/mo-xiao-shi.html">
-        <i class="icon-tag icon-large"></i>一万小时
     </a>
 </li>
 <li class="tag-4">
@@ -390,8 +261,18 @@
     </a>
 </li>
 <li class="tag-4">
-    <a href="../tag/du-shu-bi-ji.html">
-        <i class="icon-tag icon-large"></i>读书笔记
+    <a href="../tag/pelican.html">
+        <i class="icon-tag icon-large"></i>pelican
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/blog.html">
+        <i class="icon-tag icon-large"></i>blog
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/bai-du.html">
+        <i class="icon-tag icon-large"></i>百度
     </a>
 </li>
 <li class="tag-4">
@@ -405,8 +286,18 @@
     </a>
 </li>
 <li class="tag-4">
-    <a href="../tag/ke-du-xing.html">
-        <i class="icon-tag icon-large"></i>可读性
+    <a href="../tag/mac-os-x.html">
+        <i class="icon-tag icon-large"></i>mac os x
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/bian-cheng.html">
+        <i class="icon-tag icon-large"></i>编程
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/tao-bao.html">
+        <i class="icon-tag icon-large"></i>淘宝
     </a>
 </li>
 <li class="tag-4">
@@ -414,74 +305,9 @@
         <i class="icon-tag icon-large"></i>黑客
     </a>
 </li>
-<li class="tag-4">
-    <a href="../tag/nei-tui.html">
-        <i class="icon-tag icon-large"></i>内推
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/jian-li.html">
-        <i class="icon-tag icon-large"></i>简历
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/she-ji-mo-shi.html">
-        <i class="icon-tag icon-large"></i>设计模式
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/pelican.html">
-        <i class="icon-tag icon-large"></i>pelican
-    </a>
-</li>
 <li class="tag-1">
-    <a href="../tag/tao-bao.html">
-        <i class="icon-tag icon-large"></i>淘宝
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/bai-du.html">
-        <i class="icon-tag icon-large"></i>百度
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/eclipse.html">
-        <i class="icon-tag icon-large"></i>eclipse
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/bian-ji-qi.html">
-        <i class="icon-tag icon-large"></i>编辑器
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/hua-xue.html">
-        <i class="icon-tag icon-large"></i>滑雪
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/godaddy.html">
-        <i class="icon-tag icon-large"></i>godaddy
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/mac-os-x.html">
-        <i class="icon-tag icon-large"></i>mac os x
-    </a>
-</li>
-<li class="tag-2">
     <a href="../tag/python.html">
         <i class="icon-tag icon-large"></i>python
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/vim.html">
-        <i class="icon-tag icon-large"></i>vim
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/java.html">
-        <i class="icon-tag icon-large"></i>java
     </a>
 </li>
 
