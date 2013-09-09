@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
@@ -24,7 +24,7 @@ DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
 GOOGLE_ANALYTICS = 'UA-43842699-1'
 
-GOOGLE_CUSTOM_SEARCH_SIDEBAR = '010598779893653790358:wvmazcysvki'
+GOOGLE_CUSTOM_SEARCH_SIDEBAR = '010598779893653790358:vf_znd6gjts'
 
 DISQUS_SITENAME = 'wqiak47'
 
