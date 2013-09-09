@@ -49,14 +49,14 @@ SITEMAP = {
     }
 }
 
-# Blogroll
-LINKS = (('Google', 'https://www.google.com/ncr'),
-          ('Python', 'http://python.org/'),
-          ('Pelican', 'http://docs.getpelican.com/'),
-         )
-
 # Social widget
 SOCIAL = (('Github', 'https://github.com/toyqi'),
           (u'微博', 'http://weibo.com/wqibyr'),
           (u'豆瓣', 'http://www.douban.com/people/Toyqi/'),
+         )
+
+# Blogroll
+LINKS = (('Google', 'https://www.google.com/ncr'),
+          ('Python', 'http://python.org/'),
+          ('Pelican', 'http://docs.getpelican.com/'),
          )
