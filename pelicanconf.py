@@ -16,7 +16,7 @@ DEFAULT_PAGINATION = 5
 
 TIMEZONE = 'Asia/Shanghai'
 
-THEME = 'bootstrap2'
+THEME = 'tuxlite_tbs'
 
 DEFAULT_LANG = u'zh'
 
