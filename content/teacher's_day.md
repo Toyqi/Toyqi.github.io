@@ -8,7 +8,7 @@ Slug: teacher's_day
 
 先来看一条网易有关教师节的新闻
 
-http://news.163.com/13/0909/14/98B9H1SV00014AEE.html
+<http://news.163.com/13/0909/14/98B9H1SV00014AEE.html>
 
 认真看完这篇文章，主动思考到底该不该调休的都是爱学习的好孩子。
 
@@ -16,6 +16,6 @@ http://news.163.com/13/0909/14/98B9H1SV00014AEE.html
 
 下面这篇文章从另一个角度去讲述同事眼中的实习生到底是什么样的。希望有启发。
 
-http://hanhan.qq.com/hanhan/one/one337m.htm#page1
+<http://hanhan.qq.com/hanhan/one/one337m.htm#page1>
 
 时候不早了，晚安。
