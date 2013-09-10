@@ -1,5 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Toyqi的程序世界</title><link href="http://toyqi.github.io/" rel="alternate"></link><link href="http://toyqi.github.io/feeds/all-zh.atom.xml" rel="self"></link><id>http://toyqi.github.io/</id><updated>2013-09-10T00:00:00+08:00</updated><entry><title>教师节快乐</title><link href="http://toyqi.github.io/pages/2013/09/10/teacher's_day.html" rel="alternate"></link><updated>2013-09-10T00:00:00+08:00</updated><author><name>Toyqi</name></author><id>tag:toyqi.github.io,2013-09-10:pages/2013/09/10/teacher's_day.html</id><summary type="html">&lt;p&gt;今天是2013年9月10号，教师节，礼貌地祝老师们节日快乐。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Toyqi的程序世界</title><link href="http://toyqi.github.io/" rel="alternate"></link><link href="http://toyqi.github.io/feeds/all-zh.atom.xml" rel="self"></link><id>http://toyqi.github.io/</id><updated>2013-09-10T00:00:00+08:00</updated><entry><title>git - 简易指南</title><link href="http://toyqi.github.io/pages/2013/09/10/git_guide.html" rel="alternate"></link><updated>2013-09-10T00:00:00+08:00</updated><author><name>Toyqi</name></author><id>tag:toyqi.github.io,2013-09-10:pages/2013/09/10/git_guide.html</id><summary type="html">&lt;h2&gt;安装&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://code.google.com/p/git-osx-installer/downloads/list?can=3"&gt;下载git OSX版&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git"&gt;下载git Linux版&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://code.google.com/p/msysgit/downloads/list?can=3"&gt;下载git Windows版&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;创建新仓库&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;创建新文件夹，打开，执行命令&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;以创建新的git仓库。&lt;/p&gt;
+&lt;h2&gt;检出仓库&lt;/h2&gt;
+&lt;p&gt;执行如下命令创建一个本地仓库的克隆版本：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;repository&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如果是远端服务器上的仓库，命令将是这个样子：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;repository&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;工作流&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;你的本地仓库由git维护的三棵"树"组成。第一个是你的__工作目录__,它持有实际文件；第二个是__缓存区(Index)&lt;strong&gt;，它性格缓存区域，临时保存你的改动；最后是__HEAD&lt;/strong&gt;，指向你最近一次提交后的结果。&lt;/p&gt;
+&lt;h2&gt;添加与提交&lt;/h2&gt;
+&lt;p&gt;你可以计划改动（把它们添加到缓存区），使用如下命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="nx"&gt;git&lt;/span&gt; &lt;span class="nb"&gt;add&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nb"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="nx"&gt;git&lt;/span&gt; &lt;span class="nb"&gt;add&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这是git基本功做流程的第一步；使用如下命令以实际提交改动：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="err"&gt;“代码提交信息”&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;现在你的改动已经提交到HEAD，但是还没到你的远端仓库。&lt;/p&gt;
+&lt;h2&gt;推送改动&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;你的改动现在已经在本地仓库的__HEAD__中了。执行如下命令旧爱那个改动提交到远端仓库：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;可以把master换成你想要推送的任何分支。&lt;/p&gt;
+&lt;p&gt;如果你还没有克隆现有仓库，并与将你的仓库连接到某个远程服务器，可以使用如下命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="nx"&gt;git&lt;/span&gt; &lt;span class="nx"&gt;remote&lt;/span&gt; &lt;span class="nb"&gt;add&lt;/span&gt; &lt;span class="nx"&gt;origin&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;server&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如此你就能够将你的改动推送到所添加的服务器上去了。&lt;/p&gt;
+&lt;h2&gt;分支&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;分支是用来将特性开发绝缘开来的。在你创建仓库的时候，master 是“默认的”。在其他分支上进行开发，完成后再将它们合并到主分支上。
+创建一个叫做“feature_x”的分支，并切换过去：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;checkout&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="n"&gt;feature_x&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;切换回主分支：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;checkout&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;再把新建的分支删掉：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;branch&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="n"&gt;feature_x&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;除非你将分支推送到远端仓库，不然该分支就是 不为他人所见的：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="nx"&gt;git&lt;/span&gt; &lt;span class="nb"&gt;push&lt;/span&gt; &lt;span class="nx"&gt;origin&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;branch&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;更新与合并&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;要更新你的本地仓库至最新改动，执行：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;pull&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;以在你的工作目录中 获取（fetch） 并 合并（merge） 远端的改动。
+要合并其他分支到你的当前分支（例如 master），执行：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="nx"&gt;git&lt;/span&gt; &lt;span class="nb"&gt;merge&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;branch&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;两种情况下，git 都会尝试去自动合并改动。不幸的是，自动合并并非次次都能成功，并可能导致 冲突（conflicts）。 这时候就需要你修改这些文件来人肉合并这些 冲突（conflicts） 了。改完之后，你需要执行如下命令以将它们标记为合并成功：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="nx"&gt;git&lt;/span&gt; &lt;span class="nb"&gt;add&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nb"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;在合并改动之前，也可以使用如下命令查看：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="nx"&gt;git&lt;/span&gt; &lt;span class="nx"&gt;diff&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;source_branch&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;target_branch&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;标签&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;在软件发布时创建标签，是被推荐的。这是个旧有概念，在 SVN 中也有。可以执行如下命令以创建一个叫做 1.0.0 的标签：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;tag&lt;/span&gt; &lt;span class="mf"&gt;1.0.0&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;b2e1d63ff&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;1b2e1d63ff 是你想要标记的提交 ID 的前 10 位字符。使用如下命令获取提交 ID：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;log&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;你也可以用该提交 ID 的少一些的前几位，只要它是唯一的。&lt;/p&gt;
+&lt;h2&gt;替换本地改动&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;假如你做错事（自然，这是不可能的），你可以使用如下命令替换掉本地改动：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="nx"&gt;git&lt;/span&gt; &lt;span class="nx"&gt;checkout&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nb"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;此命令会使用 HEAD 中的最新内容替换掉你的工作目录中的文件。已添加到缓存区的改动，以及新文件，都不受影响。&lt;/p&gt;
+&lt;p&gt;假如你想要丢弃你所有的本地改动与提交，可以到服务器上获取最新的版本并将你本地主分支指向到它：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;fetch&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt;
+    &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;reset&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;hard&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;master&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;有用的贴士&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;内建的图形化 git：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;gitk&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;彩色的 git 输出：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;config&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ui&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;显示历史记录时，只显示一行注释信息：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;config&lt;/span&gt; &lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pretty&lt;/span&gt; &lt;span class="n"&gt;oneline&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;交互地添加文件至缓存区：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;链接与资源&lt;/h2&gt;
+&lt;h3&gt;图形化界面&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.git-tower.com/"&gt;Tower (OSX)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://itunes.apple.com/cn/app/id403388357?mt=12"&gt;GitBox (OSX)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.sourcetreeapp.com/"&gt;Source Tree (OSX, free)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://mac.github.com/"&gt;GitHub for Mac (OSX, free)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://gitx.laullon.com/"&gt;GitX (L) (OSX, open source)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;指南与手册&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://progit.org/book/"&gt;专业git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://help.github.com/"&gt;GitHub Help&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://book.git-scm.com/"&gt;Git 社区参考书&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://marklodato.github.io/visual-git-guide/index-en.html"&gt;图形化 Git 指南&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Enjoy it.&lt;/p&gt;</summary><category term="git"></category></entry><entry><title>教师节快乐</title><link href="http://toyqi.github.io/pages/2013/09/10/teacher's_day.html" rel="alternate"></link><updated>2013-09-10T00:00:00+08:00</updated><author><name>Toyqi</name></author><id>tag:toyqi.github.io,2013-09-10:pages/2013/09/10/teacher's_day.html</id><summary type="html">&lt;p&gt;今天是2013年9月10号，教师节，礼貌地祝老师们节日快乐。&lt;/p&gt;
 &lt;p&gt;先来看一条网易有关教师节的新闻&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://news.163.com/13/0909/14/98B9H1SV00014AEE.html"&gt;http://news.163.com/13/0909/14/98B9H1SV00014AEE.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;认真看完这篇文章，主动思考到底该不该调休的都是爱学习的好孩子。&lt;/p&gt;
