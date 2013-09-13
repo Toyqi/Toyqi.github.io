@@ -1,5 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Toyqi的程序世界</title><link href="http://toyqi.github.io/" rel="alternate"></link><link href="http://toyqi.github.io/feeds/all-zh.atom.xml" rel="self"></link><id>http://toyqi.github.io/</id><updated>2013-09-10T00:00:00+08:00</updated><entry><title>git - 简易指南</title><link href="http://toyqi.github.io/pages/2013/09/10/git_guide.html" rel="alternate"></link><updated>2013-09-10T00:00:00+08:00</updated><author><name>Toyqi</name></author><id>tag:toyqi.github.io,2013-09-10:pages/2013/09/10/git_guide.html</id><summary type="html">&lt;h2&gt;安装&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Toyqi的程序世界</title><link href="http://toyqi.github.io/" rel="alternate"></link><link href="http://toyqi.github.io/feeds/all-zh.atom.xml" rel="self"></link><id>http://toyqi.github.io/</id><updated>2013-09-13T00:00:00+08:00</updated><entry><title>Python 计算 Fibonacci 数列</title><link href="http://toyqi.github.io/pages/2013/09/13/python_fibonacci.html" rel="alternate"></link><updated>2013-09-13T00:00:00+08:00</updated><author><name>Toyqi</name></author><id>tag:toyqi.github.io,2013-09-13:pages/2013/09/13/python_fibonacci.html</id><summary type="html">&lt;p&gt;今天小伙伴去某度面试，有一道有意思的逻辑思维题与大家分享一下。大概意思是某栋楼有100个台阶，每次可以上一阶或两阶，走到楼顶共有多少种走法？&lt;/p&gt;
+&lt;p&gt;最简单的思考：&lt;/p&gt;
+&lt;p&gt;一共1个台阶的话有1种走法.&lt;/p&gt;
+&lt;p&gt;一共2个台阶的话有2种走法.&lt;/p&gt;
+&lt;p&gt;一共3个台阶的话有3种走法.&lt;/p&gt;
+&lt;p&gt;一共4个台阶的话有5种走法.&lt;/p&gt;
+&lt;p&gt;一共5个台阶的话有8种走法.&lt;/p&gt;
+&lt;p&gt;一共6个台阶的话有13种走法.&lt;/p&gt;
+&lt;p&gt;一共7个台阶的话有21种走法.&lt;/p&gt;
+&lt;p&gt;一共8个台阶的话有34种走法.&lt;/p&gt;
+&lt;p&gt;一共9个台阶的话有55种走法.&lt;/p&gt;
+&lt;p&gt;一共10个台阶的话有89种走法.&lt;/p&gt;
+&lt;p&gt;一共11个台阶的话有144种走法.&lt;/p&gt;
+&lt;p&gt;一共12个台阶的话有233种走法.&lt;/p&gt;
+&lt;p&gt;一共13个台阶的话有377种走法.&lt;/p&gt;
+&lt;p&gt;一共14个台阶的话有610种走法.&lt;/p&gt;
+&lt;p&gt;一共15个台阶的话有987种走法.&lt;/p&gt;
+&lt;p&gt;一共16个台阶的话有1597种走法.&lt;/p&gt;
+&lt;p&gt;一共17个台阶的话有2584种走法.&lt;/p&gt;
+&lt;p&gt;一共18个台阶的话有4181种走法.&lt;/p&gt;
+&lt;p&gt;一共19个台阶的话有6765种走法.&lt;/p&gt;
+&lt;p&gt;一共20个台阶的话有10946种走法.&lt;/p&gt;
+&lt;p&gt;一共21个台阶的话有17711种走法.&lt;/p&gt;
+&lt;p&gt;一共22个台阶的话有28657种走法.&lt;/p&gt;
+&lt;p&gt;一共23个台阶的话有46368种走法.&lt;/p&gt;
+&lt;p&gt;一共24个台阶的话有75025种走法.&lt;/p&gt;
+&lt;p&gt;一共25个台阶的话有121393种走法.&lt;/p&gt;
+&lt;p&gt;一共26个台阶的话有196418种走法.&lt;/p&gt;
+&lt;p&gt;一共27个台阶的话有317811种走法.&lt;/p&gt;
+&lt;p&gt;一共28个台阶的话有514229种走法.&lt;/p&gt;
+&lt;p&gt;一共29个台阶的话有832040种走法.&lt;/p&gt;
+&lt;p&gt;一共30个台阶的话有1346269种走法.&lt;/p&gt;
+&lt;p&gt;一共31个台阶的话有2178309种走法.&lt;/p&gt;
+&lt;p&gt;一共32个台阶的话有3524578种走法.&lt;/p&gt;
+&lt;p&gt;一共33个台阶的话有5702887种走法.&lt;/p&gt;
+&lt;p&gt;一共34个台阶的话有9227465种走法.&lt;/p&gt;
+&lt;p&gt;一共35个台阶的话有14930352种走法.&lt;/p&gt;
+&lt;h3&gt;这不正是个斐波那契（Fibonacci数列）嘛！&lt;/h3&gt;
+&lt;p&gt;好，很好。&lt;/p&gt;
+&lt;p&gt;那就开始就是干的节奏。&lt;/p&gt;
+&lt;p&gt;使用 Python 计算 Fibonacci 数列。&lt;/p&gt;
+&lt;h4&gt;Fobonacci Recursion&lt;/h4&gt;
+&lt;h4&gt;递归法：有很多重复计算，且随着n的增加，重复计算的量成指数级增长。&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;
+    &lt;span class="nl"&gt;else:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h5&gt;我的机器运算能力有点弱，自己run去吧，^_^。&lt;/h5&gt;
+&lt;h5&gt;Fibonacci Iteration&lt;/h5&gt;
+&lt;h5&gt;递推法：为了避免递归中的重复计算。&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;
+    &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+    &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;
+        &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+        &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;
+&lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;cd 到文件目录下，使用 time 命令，运行 time python Fibonacci.py &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;time&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; 
+&lt;span class="mi"&gt;354224848179261915075&lt;/span&gt;
+
+&lt;span class="n"&gt;real&lt;/span&gt;    &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;m0&lt;/span&gt;&lt;span class="mf"&gt;.021&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
+&lt;span class="n"&gt;user&lt;/span&gt;    &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;m0&lt;/span&gt;&lt;span class="mf"&gt;.020&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
+&lt;span class="n"&gt;sys&lt;/span&gt;  &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;m0&lt;/span&gt;&lt;span class="mf"&gt;.000&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;Fibonacci Optimization&lt;/h4&gt;
+&lt;h4&gt;Python Decorators&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;cache&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="nx"&gt;caches&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+    &lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;_cache&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="nx"&gt;kw&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="nx"&gt;key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;f&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;args&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nx"&gt;key&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nx"&gt;caches&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;caches&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;key&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;
+        &lt;span class="nx"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="nx"&gt;kw&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="nx"&gt;caches&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;key&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;result&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;caches&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;key&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;_cache&lt;/span&gt;
+
+&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="nx"&gt;cache&lt;/span&gt;
+&lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nx"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;n&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="nx"&gt;print&lt;/span&gt; &lt;span class="nx"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;同样，cd 到文件目录下，使用 time 命令，运行 time python Fibonacci.py &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;time&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; 
+&lt;span class="mi"&gt;354224848179261915075&lt;/span&gt;
+
+&lt;span class="n"&gt;real&lt;/span&gt;    &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;m0&lt;/span&gt;&lt;span class="mf"&gt;.026&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
+&lt;span class="n"&gt;user&lt;/span&gt;    &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;m0&lt;/span&gt;&lt;span class="mf"&gt;.020&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
+&lt;span class="n"&gt;sys&lt;/span&gt;     &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;m0&lt;/span&gt;&lt;span class="mf"&gt;.004&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;Fibonacci Sequence.&lt;/h4&gt;
+&lt;h4&gt;Have fun!&lt;/h4&gt;</summary><category term="python"></category><category term="Fibonacci"></category></entry><entry><title>git - 简易指南</title><link href="http://toyqi.github.io/pages/2013/09/10/git_guide.html" rel="alternate"></link><updated>2013-09-10T00:00:00+08:00</updated><author><name>Toyqi</name></author><id>tag:toyqi.github.io,2013-09-10:pages/2013/09/10/git_guide.html</id><summary type="html">&lt;h2&gt;安装&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://code.google.com/p/git-osx-installer/downloads/list?can=3"&gt;下载git OSX版&lt;/a&gt;&lt;/li&gt;
