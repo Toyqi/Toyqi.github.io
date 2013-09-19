@@ -51,6 +51,7 @@ SITEMAP = {
 
 # Social widget
 SOCIAL = (('Github', 'https://github.com/toyqi'),
+		  ('Twitter', 'https://twitter.com/wqibyr'),
           (u'微博', 'http://weibo.com/wqibyr'),
           (u'豆瓣', 'http://www.douban.com/people/Toyqi/'),
          )
