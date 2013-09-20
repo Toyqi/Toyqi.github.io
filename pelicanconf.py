@@ -52,8 +52,10 @@ SITEMAP = {
 # Social widget
 SOCIAL = (('Github', 'https://github.com/toyqi'),
 		  ('Twitter', 'https://twitter.com/wqibyr'),
+		  ('Facebook', 'https://www.facebook.com/wqibyr'),
           (u'微博', 'http://weibo.com/wqibyr'),
           (u'豆瓣', 'http://www.douban.com/people/Toyqi/'),
+          (u'知乎', 'http://www.zhihu.com/people/xiao-tao-qi'),
          )
 
 # Blogroll
