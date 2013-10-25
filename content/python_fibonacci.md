@@ -124,7 +124,7 @@ cd 到文件目录下，使用 time 命令，运行 time python Fibonacci.py
     
     real    0m0.021s
     user    0m0.020s
-    sys	 0m0.000s
+    sys	 	0m0.000s
     
 ####Fibonacci Optimization
 
