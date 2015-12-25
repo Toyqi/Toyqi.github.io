@@ -1,10 +1,11 @@
-﻿#!/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
 AUTHOR = u'Toyqi'
 SITENAME = u'Minecraft - 小淘琪'
 SITEURL = 'http://toyqi.github.io'
+
 
 GITHUB_URL = 'https://github.com/toyqi'
 ARCHIVES_URL = 'archives.html'
@@ -16,7 +17,7 @@ DEFAULT_PAGINATION = 5
 
 TIMEZONE = 'Asia/Shanghai'
 
-THEME = 'tuxlite_tbs'
+THEME = 'bootstrap2'
 
 DEFAULT_LANG = u'zh'
 
@@ -24,7 +25,7 @@ DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
 GOOGLE_ANALYTICS = 'UA-43842699-1'
 
-GOOGLE_CUSTOM_SEARCH_SIDEBAR = '010598779893653790358:vf_znd6gjts'
+GOOGLE_CUSTOM_SEARCH_SIDEBAR = '012191777864628038963:sjrtj5zxtec'
 
 DISQUS_SITENAME = 'wqiak47'
 
@@ -33,7 +34,7 @@ CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
 
 PLUGIN_PATH = u"pelican-plugins"
 PLUGINS = ["sitemap"]
-    
+
 ## 配置sitemap 插件
 SITEMAP = {
     "format": "xml",
@@ -49,17 +50,14 @@ SITEMAP = {
     }
 }
 
-# Social widget
-SOCIAL = (('Github', 'https://github.com/toyqi'),
-		  ('Twitter', 'https://twitter.com/wqibyr'),
-		  ('Facebook', 'https://www.facebook.com/wqibyr'),
-          (u'微博', 'http://weibo.com/wqibyr'),
-          (u'豆瓣', 'http://www.douban.com/people/Toyqi/'),
-          (u'知乎', 'http://www.zhihu.com/people/xiao-tao-qi'),
-         )
-
 # Blogroll
 LINKS = (('Google', 'https://www.google.com/ncr'),
           ('Python', 'http://python.org/'),
           ('Pelican', 'http://docs.getpelican.com/'),
+         )
+
+# Social widget
+SOCIAL = (('Github', 'https://github.com/toyqi'),
+          (u'微博', 'http://weibo.com/wqibyr'),
+          (u'豆瓣', 'http://www.douban.com/people/Toyqi/'),
          )
