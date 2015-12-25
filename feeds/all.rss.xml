@@ -1,121 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Toyqi的程序世界</title><link>http://toyqi.github.io/</link><description></description><atom:link href="http://toyqi.github.io/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 13 Sep 2013 00:00:00 +0800</lastBuildDate><item><title>Python 计算 Fibonacci 数列</title><link>http://toyqi.github.io/pages/2013/09/13/python_fibonacci.html</link><description>&lt;p&gt;今天小伙伴去某度面试，有一道有意思的逻辑思维题与大家分享一下。大概意思是某栋楼有100个台阶，每次可以上一阶或两阶，走到楼顶共有多少种走法？&lt;/p&gt;
-&lt;p&gt;最简单的思考：&lt;/p&gt;
-&lt;p&gt;一共1个台阶的话有1种走法.&lt;/p&gt;
-&lt;p&gt;一共2个台阶的话有2种走法.&lt;/p&gt;
-&lt;p&gt;一共3个台阶的话有3种走法.&lt;/p&gt;
-&lt;p&gt;一共4个台阶的话有5种走法.&lt;/p&gt;
-&lt;p&gt;一共5个台阶的话有8种走法.&lt;/p&gt;
-&lt;p&gt;一共6个台阶的话有13种走法.&lt;/p&gt;
-&lt;p&gt;一共7个台阶的话有21种走法.&lt;/p&gt;
-&lt;p&gt;一共8个台阶的话有34种走法.&lt;/p&gt;
-&lt;p&gt;一共9个台阶的话有55种走法.&lt;/p&gt;
-&lt;p&gt;一共10个台阶的话有89种走法.&lt;/p&gt;
-&lt;p&gt;一共11个台阶的话有144种走法.&lt;/p&gt;
-&lt;p&gt;一共12个台阶的话有233种走法.&lt;/p&gt;
-&lt;p&gt;一共13个台阶的话有377种走法.&lt;/p&gt;
-&lt;p&gt;一共14个台阶的话有610种走法.&lt;/p&gt;
-&lt;p&gt;一共15个台阶的话有987种走法.&lt;/p&gt;
-&lt;p&gt;一共16个台阶的话有1597种走法.&lt;/p&gt;
-&lt;p&gt;一共17个台阶的话有2584种走法.&lt;/p&gt;
-&lt;p&gt;一共18个台阶的话有4181种走法.&lt;/p&gt;
-&lt;p&gt;一共19个台阶的话有6765种走法.&lt;/p&gt;
-&lt;p&gt;一共20个台阶的话有10946种走法.&lt;/p&gt;
-&lt;p&gt;一共21个台阶的话有17711种走法.&lt;/p&gt;
-&lt;p&gt;一共22个台阶的话有28657种走法.&lt;/p&gt;
-&lt;p&gt;一共23个台阶的话有46368种走法.&lt;/p&gt;
-&lt;p&gt;一共24个台阶的话有75025种走法.&lt;/p&gt;
-&lt;p&gt;一共25个台阶的话有121393种走法.&lt;/p&gt;
-&lt;p&gt;一共26个台阶的话有196418种走法.&lt;/p&gt;
-&lt;p&gt;一共27个台阶的话有317811种走法.&lt;/p&gt;
-&lt;p&gt;一共28个台阶的话有514229种走法.&lt;/p&gt;
-&lt;p&gt;一共29个台阶的话有832040种走法.&lt;/p&gt;
-&lt;p&gt;一共30个台阶的话有1346269种走法.&lt;/p&gt;
-&lt;p&gt;一共31个台阶的话有2178309种走法.&lt;/p&gt;
-&lt;p&gt;一共32个台阶的话有3524578种走法.&lt;/p&gt;
-&lt;p&gt;一共33个台阶的话有5702887种走法.&lt;/p&gt;
-&lt;p&gt;一共34个台阶的话有9227465种走法.&lt;/p&gt;
-&lt;p&gt;一共35个台阶的话有14930352种走法.&lt;/p&gt;
-&lt;h3&gt;这不正是个斐波那契（Fibonacci数列）嘛！&lt;/h3&gt;
-&lt;p&gt;好，很好。&lt;/p&gt;
-&lt;p&gt;那就开始就是干的节奏。&lt;/p&gt;
-&lt;p&gt;使用 Python 计算 Fibonacci 数列。&lt;/p&gt;
-&lt;h4&gt;Fobonacci Recursion&lt;/h4&gt;
-&lt;h4&gt;递归法：有很多重复计算，且随着n的增加，重复计算的量成指数级增长。&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;
-    &lt;span class="nl"&gt;else:&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h5&gt;我的机器运算能力有点弱，自己run去吧，^_^。&lt;/h5&gt;
-&lt;h5&gt;Fibonacci Iteration&lt;/h5&gt;
-&lt;h5&gt;递推法：为了避免递归中的重复计算。&lt;/h5&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;
-    &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-    &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-    &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;
-        &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
-        &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;
-&lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;cd 到文件目录下，使用 time 命令，运行 time python Fibonacci.py &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;time&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; 
-&lt;span class="mi"&gt;354224848179261915075&lt;/span&gt;
-
-&lt;span class="n"&gt;real&lt;/span&gt;    &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;m0&lt;/span&gt;&lt;span class="mf"&gt;.021&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
-&lt;span class="n"&gt;user&lt;/span&gt;    &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;m0&lt;/span&gt;&lt;span class="mf"&gt;.020&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
-&lt;span class="n"&gt;sys&lt;/span&gt;     &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;m0&lt;/span&gt;&lt;span class="mf"&gt;.000&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h4&gt;Fibonacci Optimization&lt;/h4&gt;
-&lt;h4&gt;Python Decorators&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;cache&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-    &lt;span class="nx"&gt;caches&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
-    &lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;_cache&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="nx"&gt;kw&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="nx"&gt;key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;f&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;args&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nx"&gt;key&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nx"&gt;caches&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;caches&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;key&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;
-        &lt;span class="nx"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="nx"&gt;kw&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="nx"&gt;caches&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;key&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;result&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;caches&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;key&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;_cache&lt;/span&gt;
-
-&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="nx"&gt;cache&lt;/span&gt;
-&lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nx"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;n&lt;/span&gt;
-    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="nx"&gt;print&lt;/span&gt; &lt;span class="nx"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;同样，cd 到文件目录下，使用 time 命令，运行 time python Fibonacci.py &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;time&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;Fibonacci&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; 
-&lt;span class="mi"&gt;354224848179261915075&lt;/span&gt;
-
-&lt;span class="n"&gt;real&lt;/span&gt;    &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;m0&lt;/span&gt;&lt;span class="mf"&gt;.026&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
-&lt;span class="n"&gt;user&lt;/span&gt;    &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;m0&lt;/span&gt;&lt;span class="mf"&gt;.020&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
-&lt;span class="n"&gt;sys&lt;/span&gt;     &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;m0&lt;/span&gt;&lt;span class="mf"&gt;.004&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h4&gt;Fibonacci Sequence.&lt;/h4&gt;
-&lt;h4&gt;Have fun!&lt;/h4&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Toyqi</dc:creator><pubDate>Fri, 13 Sep 2013 00:00:00 +0800</pubDate><guid>tag:toyqi.github.io,2013-09-13:pages/2013/09/13/python_fibonacci.html</guid><category>python</category><category>Fibonacci</category></item><item><title>git - 简易指南</title><link>http://toyqi.github.io/pages/2013/09/10/git_guide.html</link><description>&lt;h2&gt;安装&lt;/h2&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Minecraft - 小淘琪</title><link>http://toyqi.github.io/</link><description></description><atom:link href="http://toyqi.github.io/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 25 Dec 2015 00:00:00 +0800</lastBuildDate><item><title>2015总结</title><link>http://toyqi.github.io/pages/2015/12/25/2015_summary.html</link><description>&lt;p&gt;毕业后一直想总结一下大学生活，如今已毕业一年半，工作后的经历更能指引我前行。&lt;/p&gt;
+&lt;p&gt;2015是收获颇丰的一年。&lt;/p&gt;
+&lt;h2&gt;工作&lt;/h2&gt;
+&lt;p&gt;2014.07.10报道，短暂的5周轮岗实习，2014.08.25如愿以偿分配至信息化事业部，2015.04.13幸运地从技术部门转到业务部门，&lt;/p&gt;
+&lt;p&gt;开始了半路出家的半个产品经理的生活，运营、计费、产品经理，有点累很充实。&lt;/p&gt;
+&lt;p&gt;工作中有很多不足之处，这些经历让我逐渐总结出我的工作哲学，大错不犯，小错不断，还得加强学习新知识的能力，强化小心脏。&lt;/p&gt;
+&lt;p&gt;最近两件亲眼所见之事对我有较大触动：
+1、86年副总；
+2、30岁的小公司老板，事业小有成就，婚姻美满；&lt;/p&gt;
+&lt;p&gt;思忖下自己，而立之年能否做到“立”，期待。&lt;/p&gt;
+&lt;h2&gt;生活&lt;/h2&gt;
+&lt;p&gt;毕业时的愿望清单已全部实现&lt;/p&gt;
+&lt;p&gt;2014.09.26    iPad Mini 16G&lt;/p&gt;
+&lt;p&gt;2015.02.10    iPhone 6 16G&lt;/p&gt;
+&lt;p&gt;2015.04.11    ThinkPad T440&lt;/p&gt;
+&lt;p&gt;2015.05.29    太真眼镜店&lt;/p&gt;
+&lt;p&gt;2015.07.11    Giant XTC800&lt;/p&gt;
+&lt;p&gt;2015.09.28    LP 斯诺克球杆&lt;/p&gt;
+&lt;p&gt;2015.10.17    北京邮电大学校庆60周年&lt;/p&gt;
+&lt;p&gt;2015.11.16    Armani EA 手表&lt;/p&gt;
+&lt;p&gt;依然是最低配的标准，追求精致的生活目标铭记于心，不忘初心。&lt;/p&gt;
+&lt;h2&gt;感情&lt;/h2&gt;
+&lt;p&gt;无。&lt;/p&gt;
+&lt;h2&gt;展望&lt;/h2&gt;
+&lt;p&gt;在工作上有更高的突破，看几本精品书，研究下房子和车子，也许能找到女朋友，也许吧。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Toyqi</dc:creator><pubDate>Fri, 25 Dec 2015 00:00:00 +0800</pubDate><guid>tag:toyqi.github.io,2015-12-25:pages/2015/12/25/2015_summary.html</guid><category>工作</category></item><item><title>git - 简易指南</title><link>http://toyqi.github.io/pages/2013/09/10/git_guide.html</link><description>&lt;h2&gt;安装&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://code.google.com/p/git-osx-installer/downloads/list?can=3"&gt;下载git OSX版&lt;/a&gt;&lt;/li&gt;
@@ -282,14 +190,7 @@
 &lt;li&gt;&lt;a href="http://book.git-scm.com/"&gt;Git 社区参考书&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://marklodato.github.io/visual-git-guide/index-en.html"&gt;图形化 Git 指南&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Enjoy it.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Toyqi</dc:creator><pubDate>Tue, 10 Sep 2013 00:00:00 +0800</pubDate><guid>tag:toyqi.github.io,2013-09-10:pages/2013/09/10/git_guide.html</guid><category>git</category></item><item><title>教师节快乐</title><link>http://toyqi.github.io/pages/2013/09/10/teacher's_day.html</link><description>&lt;p&gt;今天是2013年9月10号，教师节，礼貌地祝老师们节日快乐。&lt;/p&gt;
-&lt;p&gt;先来看一条网易有关教师节的新闻&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://news.163.com/13/0909/14/98B9H1SV00014AEE.html"&gt;http://news.163.com/13/0909/14/98B9H1SV00014AEE.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;认真看完这篇文章，主动思考到底该不该调休的都是爱学习的好孩子。&lt;/p&gt;
-&lt;p&gt;看到这篇文章，我倒陷入了一段沉思，想起了在思普崚实习的五个月，管同事叫老师现在想想还是很好笑的，对，没错，是好笑，不是搞笑。&lt;/p&gt;
-&lt;p&gt;下面这篇文章从另一个角度去讲述同事眼中的实习生到底是什么样的。希望有启发。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://hanhan.qq.com/hanhan/one/one337m.htm#page1"&gt;http://hanhan.qq.com/hanhan/one/one337m.htm#page1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;时候不早了，晚安。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Toyqi</dc:creator><pubDate>Tue, 10 Sep 2013 00:00:00 +0800</pubDate><guid>tag:toyqi.github.io,2013-09-10:pages/2013/09/10/teacher's_day.html</guid><category>教师节</category></item><item><title>如何成为一名黑客(转)</title><link>http://toyqi.github.io/pages/2013/08/06/become_a_hack.html</link><description>&lt;p&gt;这是一份大名鼎鼎的黑客手册，来自Eric S. Raymond，我忍不住转存下来。&lt;/p&gt;
+&lt;p&gt;Enjoy it.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Toyqi</dc:creator><pubDate>Tue, 10 Sep 2013 00:00:00 +0800</pubDate><guid>tag:toyqi.github.io,2013-09-10:pages/2013/09/10/git_guide.html</guid><category>git</category></item><item><title>如何成为一名黑客(转)</title><link>http://toyqi.github.io/pages/2013/08/06/become_a_hack.html</link><description>&lt;p&gt;这是一份大名鼎鼎的黑客手册，来自Eric S. Raymond，我忍不住转存下来。&lt;/p&gt;
 &lt;h2&gt;什么是黑客&lt;/h2&gt;
 &lt;p&gt;Jargon File 包含了一大堆关于“hacker”这个词的定义，大部分与技术高超和热衷解决问题 及超越极限有关。但如果你只想知道如何 成为 一名黑客， 那么只有两件事情确实相关。&lt;/p&gt;
 &lt;p&gt;这可以追溯到几十年前第一台分时小型电脑诞生, ARPAnet 实验也刚展开的 年代，那时有一个由程序设计专家和网络名人所组成的, 具有分享特点的文化社群。 这种文化的成员创造了 “hacker” 这个名词。黑客们建立了 Internet。 黑客们发明出了现在使用的 UNIX 操作系统。黑客们使 Usenet 运作起来， 黑客们让 WWW 运转起来。如果你是这个文化的一部分，如果你对这种文化有所贡献，而且 这个社群的其它成员也认识你并称你为 hacker, 那么你就是一位黑客。&lt;/p&gt;
