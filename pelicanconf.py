@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Toyqi'
-SITENAME = u'Toyqi的程序世界'
+SITENAME = u'Minecraft - 小淘琪'
 SITEURL = 'http://toyqi.github.io'
 
 GITHUB_URL = 'https://github.com/toyqi'
