@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://toyqi.github.io/</loc>
-<lastmod>2015-12-26T02:28:53-00:00</lastmod>
+<lastmod>2015-12-26T02:34:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://toyqi.github.io/archives.html</loc>
-<lastmod>2015-12-26T02:28:53-00:00</lastmod>
+<lastmod>2015-12-26T02:34:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://toyqi.github.io/tags.html</loc>
-<lastmod>2015-12-26T02:28:53-00:00</lastmod>
+<lastmod>2015-12-26T02:34:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://toyqi.github.io/categories.html</loc>
-<lastmod>2015-12-26T02:28:53-00:00</lastmod>
+<lastmod>2015-12-26T02:34:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://toyqi.github.io/pages/about.html</loc>
-<lastmod>2015-12-26T02:28:53-00:00</lastmod>
+<lastmod>2015-12-26T02:34:31-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
 </url>
@@ -61,42 +61,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://toyqi.github.io/category/life.html</loc>
-<lastmod>2015-12-26T02:28:53-00:00</lastmod>
+<lastmod>2015-12-26T02:34:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://toyqi.github.io/category/tech.html</loc>
-<lastmod>2015-12-26T02:28:53-00:00</lastmod>
+<lastmod>2015-12-26T02:34:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://toyqi.github.io/tag/gong-zuo.html</loc>
-<lastmod>2015-12-26T02:28:53-00:00</lastmod>
+<lastmod>2015-12-26T02:34:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://toyqi.github.io/tag/hei-ke.html</loc>
-<lastmod>2015-12-26T02:28:53-00:00</lastmod>
+<lastmod>2015-12-26T02:34:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://toyqi.github.io/tag/git.html</loc>
-<lastmod>2015-12-26T02:28:53-00:00</lastmod>
+<lastmod>2015-12-26T02:34:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://toyqi.github.io/author/toyqi.html</loc>
-<lastmod>2015-12-26T02:28:53-00:00</lastmod>
+<lastmod>2015-12-26T02:34:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
